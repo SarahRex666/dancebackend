@@ -1,14 +1,14 @@
 class DanceClassesController < ApplicationController
     skip_before_action :authenticate_user
-    before_action :set_dance_class, only: [:show, :update, :destroy]
-    
+
     def index
         dance_classes = DanceClass.all
         render json: dance_classes
     end
 
     def show
-        render json: @dance_class, serializer: DanceClassSerializer, status: :ok
+        dance_class = DanceClass.find_by(id: params[:id])
+        render json: dance_class, serializer: DanceClassSerializer, status: :ok
     end
 
     def create
@@ -17,19 +17,18 @@ class DanceClassesController < ApplicationController
     end
 
     def update
-        @dance_class.update(dance_class_params)
-        render json: @dance_class, status: :ok
+        dance_class = DanceClass.find_by(id: params[:id])
+        dance_class.update(dance_class_params)
+        render json: dance_class, status: :ok
     end
 
     def destroy
-        @dance_class.destroy
+        dance_class = DanceClass.find_by(id: params[:id])
+        dance_class.destroy
+        render json: ""
     end
 
     private 
-
-    def set_dance_class
-        @dance_class = DanceClass.find(params[:id])
-    end
 
     def authorize_user
         return if current_user.admin?
@@ -37,6 +36,6 @@ class DanceClassesController < ApplicationController
     end
 
     def dance_class_params
-        params.permit(:name, :style, :description, :user_id, :teacher_id)
+        params.permit(:id, :name, :style, :description, :user_id, :teacher_id, :dance_class)
     end
 end

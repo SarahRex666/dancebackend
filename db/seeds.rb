@@ -16,12 +16,12 @@ user9 = User.create(first_name: "Waldo", last_name: "Unknown", address: "Somewhe
 
 
 puts "Seeding teachers.."
-teacher1 = Teacher.create(name: "Miss Ashley", bio: "Hip hop and ballet master!")
-teacher2 = Teacher.create(name: "Miss Amanda", bio: "Loves all kinds of dance!")
-teacher3 = Teacher.create(name: "Mister Joe", bio: "Fun and passionate teacher, full of life.")
-teacher4 = Teacher.create(name: "Miss Kristi", bio: "Studied ballet professionally for ten years.")
-teacher5 = Teacher.create(name: "Miss Lydia", bio: "Loves all things lyrical!")
-teacher6 = Teacher.create(name: "Mister Mike", bio: "Our resident performing arts expert!")
+teacher1 = Teacher.create(name: "Miss Ashley", bio: "Hip hop and ballet master!", photo_url:"https://static.wixstatic.com/media/4cdb4c_f4e5c6ad4c124cccb37d390a35c45332~mv2.jpg/v1/crop/x_178,y_0,w_886,h_1535/fill/w_122,h_208,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/IMG_1417.jpg")
+teacher2 = Teacher.create(name: "Miss Amanda", bio: "Loves all kinds of dance!", photo_url: "https://static.wixstatic.com/media/4cdb4c_aaa7666c4e6e4f499ccbb9ed2609d770~mv2.jpg/v1/fill/w_116,h_201,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/4cdb4c_aaa7666c4e6e4f499ccbb9ed2609d770~mv2.jpg")
+teacher3 = Teacher.create(name: "Mister Joe", bio: "Fun and passionate teacher, full of life.", photo_url:"https://static.wixstatic.com/media/4cdb4c_663b1cea3fa3423bbb06d17c2c794cad~mv2.jpg/v1/fill/w_181,h_180,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/4cdb4c_663b1cea3fa3423bbb06d17c2c794cad~mv2.jpg")
+teacher4 = Teacher.create(name: "Miss Kristi", bio: "Studied ballet professionally for ten years.", photo_url:"https://static.wixstatic.com/media/4cdb4c_bfd4b5d360c94e3f82e504aa2b449ace~mv2.jpg/v1/fill/w_180,h_180,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/DSC_8883.jpg")
+teacher5 = Teacher.create(name: "Miss Lydia", bio: "Loves all things lyrical!", photo_url:"https://static.wixstatic.com/media/4cdb4c_c64baf890812446c9e9f77576a78166c~mv2.jpg/v1/fill/w_179,h_220,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/4cdb4c_c64baf890812446c9e9f77576a78166c~mv2.jpg")
+teacher6 = Teacher.create(name: "Mister Mike", bio: "Our resident performing arts expert!", photo_url:"")
 
 puts "Seeding classes.."
 class1 = DanceClass.create(name: "Beginner Ballet", style: "Ballet", description: "Ballet for beginners! All welcome!", teacher_id: teacher2.id, user_id: user2.id, time: "Monday 5:00pm")

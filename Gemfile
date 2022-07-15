@@ -11,7 +11,7 @@ gem 'rack-cors'
 gem 'cors'
 gem 'pg'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
+# gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
 

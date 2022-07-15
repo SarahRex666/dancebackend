@@ -1,9 +1,10 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-group :production do
+
 ruby "2.7.4"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+group :production do
 gem "rails", "~> 7.0.3"
 gem 'active_model_serializers'
 gem 'rack-cors'

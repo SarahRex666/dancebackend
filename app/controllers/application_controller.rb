@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
     include ActionController::Cookies
     before_action :authenticate_user
-    before_action :set_csrf_cookie
+    # before_action :set_csrf_cookie
     skip_before_action :verify_authenticity_token
 
     def authorized
@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 
     def set_csrf_cookie
         cookies["CSRF-TOKEN"] = form_authenticity_token
-      end
+    end
 
     def current_user
         @current_user ||= User.find_by_id(session[:user_id])
